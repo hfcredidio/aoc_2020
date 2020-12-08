@@ -11,6 +11,7 @@ fn main() {
         "1" => day1::day1(),
         "2" => day2::day2(&Path::new("data/day2.txt")),
         "3" => day3::day3(&Path::new("data/day3.txt")),
+        "4" => println!("¯\\_(ツ)_/¯"),
         _ => println!("This day is not available"),
     }
 }

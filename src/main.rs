@@ -4,6 +4,7 @@ use std::path::Path;
 mod day1;
 mod day2;
 mod day3;
+mod day5;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -12,6 +13,7 @@ fn main() {
         "2" => day2::day2(&Path::new("data/day2.txt")),
         "3" => day3::day3(&Path::new("data/day3.txt")),
         "4" => println!("¯\\_(ツ)_/¯"),
+        "5" => day5::day5(&Path::new("data/day5.txt")),
         _ => println!("This day is not available"),
     }
 }

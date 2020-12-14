@@ -18,6 +18,7 @@ fn main() {
         "4" => println!("¯\\_(ツ)_/¯"),
         "5" => day5::day5(&Path::new("data/day5.txt")),
         "6" => day6::day6(&Path::new("data/day6.txt")),
+        "7" => println!("¯\\_(ツ)_/¯"),
         _ => println!("This day is not available"),
     }
 }

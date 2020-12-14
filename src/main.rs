@@ -9,6 +9,7 @@ mod day3;
 mod day5;
 mod day6;
 mod day8;
+mod day9;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -21,6 +22,7 @@ fn main() {
         "6" => day6::day6(&Path::new("data/day6.txt")),
         "7" => println!("¯\\_(ツ)_/¯"),
         "8" => day8::day8(&Path::new("data/day8.txt")),
+        "9" => day9::day9(&Path::new("data/day9.txt")),
         _ => println!("This day is not available"),
     }
 }

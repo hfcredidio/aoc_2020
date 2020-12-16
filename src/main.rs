@@ -1,9 +1,11 @@
 #![feature(iterator_fold_self)]
+#![feature(peekable_next_if)]
 
 use std::env;
 use std::path::Path;
 
 mod day1;
+mod day10;
 mod day2;
 mod day3;
 mod day5;
@@ -23,6 +25,7 @@ fn main() {
         "7" => println!("¯\\_(ツ)_/¯"),
         "8" => day8::day8(&Path::new("data/day8.txt")),
         "9" => day9::day9(&Path::new("data/day9.txt")),
+        "10" => day10::day10(&Path::new("data/day10.txt")),
         _ => println!("This day is not available"),
     }
 }

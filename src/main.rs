@@ -10,6 +10,7 @@ mod day12;
 mod day13;
 mod day14;
 mod day14_2;
+mod day15;
 mod day2;
 mod day3;
 mod day5;
@@ -37,6 +38,7 @@ fn main() {
             day14::day14(&Path::new("data/day14.txt"));
             day14_2::day14_2(&Path::new("data/day14.txt"));
         }
+        "15" => day15::day15(),
         _ => println!("This day is not available"),
     }
 }

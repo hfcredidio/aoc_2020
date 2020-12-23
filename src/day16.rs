@@ -103,18 +103,17 @@ pub fn day16(path: &Path) {
                 .collect::<Vec<_>>()
         })
         .unwrap();
-    let mut valid_nearby_tickets = valid_nearby_tickets
-        .iter()
-        .enumerate()
-        .collect::<Vec<_>>();
+    let mut valid_nearby_tickets = valid_nearby_tickets.iter().enumerate().collect::<Vec<_>>();
     valid_nearby_tickets.sort_by_key(|(_, v)| v.len());
-    let result = valid_nearby_tickets.iter().scan(HashSet::new(), |state, (i, fields)| {
-        let res = fields.difference(&state).cloned().next().unwrap();
-        *state = (**fields).clone();
-        Some((i, res))
-    })
-    .filter(|(_, field)| field.starts_with("departure"))
-    .map(|(i, _)| your_ticket[*i as usize])
-    .fold_first(|state, x| state * x);
+    let result = valid_nearby_tickets
+        .iter()
+        .scan(HashSet::new(), |state, (i, fields)| {
+            let res = fields.difference(&state).cloned().next().unwrap();
+            *state = (**fields).clone();
+            Some((i, res))
+        })
+        .filter(|(_, field)| field.starts_with("departure"))
+        .map(|(i, _)| your_ticket[*i as usize])
+        .fold_first(|state, x| state * x);
     println!("{:?}", result);
 }
